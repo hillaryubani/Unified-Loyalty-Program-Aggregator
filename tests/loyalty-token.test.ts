@@ -1,5 +1,7 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
+const contractOwner = 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM';
+
 // Mock contract state
 let tokenBalances: { [key: string]: number } = {};
 let totalSupply = 0;
@@ -37,7 +39,6 @@ const mockContractCall = vi.fn((functionName: string, args: any[], sender: strin
 });
 
 describe('Loyalty Token Contract', () => {
-  const contractOwner = 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM';
   const user1 = 'ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG';
   const user2 = 'ST3AM1A56AK2C1XAFJ4115ZSV26EB49BVQ10MGCS0';
   
